@@ -1,0 +1,44 @@
+Config:
+  OutputMode: 7
+  OutputFile: PD2Hook.log
+  PrintOffsets: true
+  ExtraCols: 10
+  ExtraRows: 10
+#The line below is optional, If you don't know what it is for, comment it out or remove it.
+  #FirstRunScript: config.lua
+# Format is - [KeyCode, ScriptFile]
+KeyBindings:
+  - [VK_F1, trainer\godmode.lua]
+  - [VK_F2, trainer\maskoff.lua]
+  - [VK_F3, trainer\infiniteammo.lua]
+  - [VK_F4, trainer\extremefirerate.lua]
+  #- [VK_F5, LUA\somescript.lua]
+  #- [VK_F6, LUA\somescript.lua]
+  - [VK_F7, trainer\screwintro.lua]
+  #- [VK_F8, LUA\somescript.lua]
+  #- [VK_F9, LUA\somescript.lua]
+# This would give you a "run last script" key on F10
+  - [VK_F10, '*']
+# This would give you a global toggle key on F11.
+  - [VK_F11, '']
+  - [VK_MBUTTON, trainer\teleport.lua]
+  - [0x34, trainer\place_ammo.lua]
+  - [0x35, trainer\place_medkit.lua]
+  - [0x36, trainer\place_sentry.lua]
+  - [0x37, trainer\tripmine.lua]
+  - [0x38, trainer\replenish.lua]
+  - [0x30, trainer\revive.lua]
+  - [0x5A, trainer\replenish.lua]
+  - [VK_END, trainer\win.lua]
+  - [VK_NUMPAD1, trainer\rescuemyself.lua]
+  - [VK_NUMPAD2, trainer\rescueall.lua]
+  - [VK_NUMPAD3, trainer\nukeunits.lua]
+  - [VK_HOME, trainer\normalise.lua]
+#PersistScripts:
+ #- [CarryStackerSetupDone, LUA\\carrystackerinit.lua]
+#PostRequireScripts are optional too, see the README for what their purpose is. comment it out otherwise.
+PostRequireScripts:
+  - [lib/entry, trainer\init.lua]
+  - [lib/setups/gamesetup, trainer\game_init.lua]
+#CloseScripts:
+  #- LUA\statesaver.lua
