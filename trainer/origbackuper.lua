@@ -13,7 +13,7 @@ end
 function Backuper:cache(data)
   if not self._cached[data] then
     self._cached[data] = true
-	return false
+  return false
   end
   return true
 end
@@ -49,7 +49,7 @@ function Backuper:restore(stuff_string, name, forced)
   if n then
     pcall(loadstring(stuff_string..' = '..self._name..'._originals[\"'..stuff_string..'\"]'))
     self._originals[n] = nil
-	self._cached[n] = nil
+  self._cached[n] = nil
   end
 end
 
@@ -59,7 +59,7 @@ function Backuper:restore_all(forced)
   end
   for n,_ in pairs(self._originals) do
     pcall(loadstring(n..' = '..self._name..'._originals[\"'..n..'\"]'))
-	self._originals[n] = nil
-	self._cached[n] = nil
+  self._originals[n] = nil
+  self._cached[n] = nil
   end
 end

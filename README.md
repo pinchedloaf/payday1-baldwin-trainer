@@ -22,9 +22,3 @@ Just copy to pd1 directory. See config.lua for config options.
 Notes
 -----
 Payday 1, 1.22.0 (latest)
-
-WARNINGS
---------
-Remove all scripts that you are not using. Some phone home for usage
--- __fish.luac, and should be removed in future updates.
-

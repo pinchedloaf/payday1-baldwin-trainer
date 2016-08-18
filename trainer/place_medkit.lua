@@ -7,9 +7,9 @@ place_medkit = place_medkit or function()
     return
   end
   if Network:is_client() then
-	managers.network:session():send_to_host('place_doctor_bag', pos, rot, 5)
+  managers.network:session():send_to_host('place_doctor_bag', pos, rot, 5)
   else
-	DoctorBagBase.spawn(pos, rot, 5)
+  DoctorBagBase.spawn(pos, rot, 5)
   end
 end
 

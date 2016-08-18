@@ -26,7 +26,7 @@ end
 function my_pos()
   if managers.player and managers.player:player_unit() then
     local ply = managers.player:player_unit()
-	return ply:movement():m_pos(), Rotation(ply:movement():m_head_rot():yaw(),0,0)
+  return ply:movement():m_pos(), Rotation(ply:movement():m_head_rot():yaw(),0,0)
   end
 end
 
@@ -82,10 +82,10 @@ normaliser:backup('BaseInteractionExt.interact_start')
 
 function BaseInteractionExt:interact_start(player)
   if self:_interact_blocked(player) then
-	if self._tweak_data.blocked_hint then
-		managers.hint:show_hint(self._tweak_data.blocked_hint)
-	end
-	return false
+  if self._tweak_data.blocked_hint then
+    managers.hint:show_hint(self._tweak_data.blocked_hint)
+  end
+  return false
   end
   return self:interact(player)
 end
@@ -117,14 +117,10 @@ if baldwin_config.NoCivilianPenality then
   function StatisticsManager:killed(data)
     local name = data.name
     if name == "civilian" or name == "civilian_female" or name == "bank_manager" then
-	  return
-	end
-	return self:__killed(data)
+    return
+  end
+  return self:__killed(data)
    end
    normaliser:backup('CopDamage._show_death_hint')
    function CopDamage:_show_death_hint(type) end --To don't embarase you, that you killed civilian again
-end
-
-if baldwin_config.__fish then
-  dofiles('b_trainer/__fish.luac')
 end

@@ -15,6 +15,6 @@ if ray then
     managers.network:session():send_to_host( "attach_device", pos, ray.normal, sensor_upgrade )
   else
     local unit = TripMineBase.spawn(pos, Rotation(ray.normal, math.UP))
-	unit:base():set_active( true, player )
+  unit:base():set_active( true, player )
   end
 end

@@ -7,7 +7,7 @@ place_ammo = place_ammo or function()
     return
   end
   if Network:is_client() then
-	managers.network:session():send_to_host('place_ammo_bag', pos, rot, 5)
+  managers.network:session():send_to_host('place_ammo_bag', pos, rot, 5)
   else
     AmmoBagBase.spawn(pos, rot, 5)
   end
